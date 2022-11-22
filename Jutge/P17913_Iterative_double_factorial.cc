@@ -14,7 +14,7 @@
 
 #include <iostream>
 
-int double_factorial(int numero) {
+int double_factorial (int numero) {
     int resultado {1};
     for (int i = numero; i > 1; i -= 2) {
         resultado *= i;

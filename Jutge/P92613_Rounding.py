@@ -9,7 +9,9 @@
 # @brief Es un programa que lee un número real x≥0 e imprime [x] (el truncamiento de x), [x] (el exceso de x) y el redondeo de x.
 # @see https://jutge.org/problems/P92613_en
 
+#!/usr/bin/python
+
 import math
 
-n = float(input())
-print (int(math.floor(n)), int(math.ceil(n)), int(round(n)))
+n = input()
+print int(math.floor(n)), int(math.ceil(n)), int(round(n))
