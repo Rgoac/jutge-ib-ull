@@ -15,23 +15,21 @@
 #include <iostream>
 
 int main() {
-	double numero;
-	long long int truncamiento, exceso, redondeo;
+	double numero = 0;
+	int inferior, superior, entero = 0;
 	std::cin >> numero;
 	
-	exceso=numero+1;
-	truncamiento=numero;
+	superior = numero + 1;
+	inferior = numero;
 	
-	if (numero>=0.5){
-		redondeo=numero+0.5;
+	if (numero >= 0.5){
+		entero = numero + 0.5;
 	}
-	else if (numero<0.5){
-		redondeo=numero-0.5;
+	else if (numero < 0.5){
+		entero = numero - 0.5;
 	}
-	else if (numero=0.0){
-		numero=numero;
+	else if (numero = 0.0){
+		numero = numero;
 	}
-	std::cout<< truncamiento << " " << exceso << " " << redondeo << std::endl;
-
-	return 0;
+	std::cout << inferior << " " << superior << " " << entero << std::endl;	
 }
