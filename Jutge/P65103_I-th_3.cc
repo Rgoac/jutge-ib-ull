@@ -15,20 +15,25 @@
 
 #include <iostream>
 
-int main () {
-	int numero;
-  int posicion;
-  bool posicion_correcta = false;
-  std::cin >> posicion;
-  int secuencia = posicion;
-  while (std::cin >> numero) {
-    if (--posicion == 0) {
-      std::cout << "At the position " << secuencia << " there is a(n) " << numero << "." << std::endl;
-      posicion_correcta = true;
-      break;
-    }
+int main() {
+	int secuencia;
+	int posicion;
+	std::cin >> posicion;
+	int j = 1;
+	int numero = 0 ;
+	bool incorrect = true;
+	while (std::cin >> secuencia && secuencia != -1) {
+		if (j == posicion) {
+			numero = secuencia;
+			incorrect = false;
+		}
+	  j++;
+	}
+	if (!incorrect) {
+    std::cout << "At the position " << posicion << " there is a(n) " << numero << ".";
   }
-  if (!posicion_correcta) {
-    std::cout << "Incorrect position." << std::endl;
+	else {
+    std::cout << "Incorrect position.";
   }
+	std::cout << std::endl;
 }
