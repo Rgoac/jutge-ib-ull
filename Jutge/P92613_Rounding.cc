@@ -16,7 +16,7 @@
 
 int main() {
 	double numero;
-	long long int truncamiento, exceso, redondeo;
+	long long int truncamiento, exceso, redondeo = 0;
 	std::cin >> numero;
 	
 	exceso=numero+1;
@@ -32,6 +32,5 @@ int main() {
 		numero=numero;
 	}
 	std::cout<< truncamiento << " " << exceso << " " << redondeo << std::endl;
-
 	return 0;
 }
