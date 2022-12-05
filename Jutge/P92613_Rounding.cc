@@ -13,23 +13,16 @@
   */
 
 #include <iostream>
+#include <cmath>
 
 int main() {
 	double numero = 0;
-	int inferior, superior, entero = 0;
+	int inferior, superior, redondeo = 0;
 	std::cin >> numero;
 	
-	superior = numero + 1;
-	inferior = numero;
+	superior = ceil(numero);
+	inferior = floor(numero);
+  redondeo = round(numero);
 	
-	if (numero >= 0.5){
-		entero = numero + 0.5;
-	}
-	else if (numero < 0.5){
-		entero = numero - 0.5;
-	}
-	else if (numero = 0.0){
-		numero = numero;
-	}
-	std::cout << inferior << " " << superior << " " << entero << std::endl;	
+	std::cout << inferior << " " << superior << " " << redondeo << std::endl;	
 }
